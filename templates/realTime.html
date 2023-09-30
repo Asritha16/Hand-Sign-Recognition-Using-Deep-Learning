@@ -1,0 +1,93 @@
+<html>
+<head>
+</head>
+<style>
+body {
+  background-color: rgb(235, 242, 245);
+  padding-top: 10px;
+  background-color: #ffffffff;
+  text-align: center;
+  padding-top: 50px;
+  background-color: #ffffffff;
+  padding-top: 10px;
+  background-image: url("static/images/bg3.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+h1
+{
+  font-size: 30px;
+  text-shadow: -1px -1px rgb(235, 65, 65), 1px 1px rgb(224, 73, 27), -3px 0 4px #000;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  color:rgb(217, 82, 75);
+  padding:24px 32px 32px 32px;
+  font-weight:lighter;
+  -moz-box-shadow: 2px 2px 6px #888;  
+  -webkit-box-shadow: 2px 2px 6px #888;  
+  box-shadow:2px 2px 6px #888;  
+  text-align:center;
+  display:inline;
+  line-height:150px;
+  border-radius: 5%;
+  background-color: brown;
+}
+#image{
+  border-radius: 3%;
+  border-color: green;
+  box-sizing: border-box;
+  height: 70%;
+  width: 70%;
+  box-shadow: rgb(236, 4, 120);
+  box-shadow: #644848;
+  object-fit: contain;
+  box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+  transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  image-resolution: from-image;
+}
+button {
+    cursor: pointer;
+            border: 5px solid #db5334;
+            background-color: transparent;
+            height: 50px;
+            width: 200px;
+            color: #db5334;
+            font-size: 1.5em;
+            box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.6);
+            font-size: 20px;
+  text-shadow: -1px -1px rgb(164, 50, 49), 1px 1px rgb(221, 94, 68), -3px 0 4px #000;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  text-align: center;
+  border-radius: 10px;
+}
+button:hover {
+    background-color: #cb3c2f;
+    color: white;
+}
+</style>
+<body> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hand Sign Recognition</title>
+<div style="text-align:center">
+<span">
+<h1>Hand Sign Recognition</h1>
+    <br>
+    <div>
+  <img id="image" src="{{ url_for('video_feed') }}" width="50%">
+    </div>
+	<br>
+    <br>
+    <a href="/">
+      <button>HOME</button>
+  </a>
+  <audio id="sound" src='static\siren.wav'></audio>
+</span>
+</body>
+<script>
+
+  document.getElementById("sound").play();
+
+</script>
+</html>
